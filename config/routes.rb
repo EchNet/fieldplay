@@ -1,7 +1,10 @@
 Fieldplay::Application.routes.draw do
 
-  get "welcome/index"
   root 'welcome#index'
+
+  get 'users/register' => 'user#register'
+  post 'users/register' => 'user#register'
+  post 'users/login' => 'user#login'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
